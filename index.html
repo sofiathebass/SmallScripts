@@ -48,7 +48,7 @@
 						<h2>Menu</h2>
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="officers.html">Add Script</a></li>
+							<li><a href="index.html">Add Script</a></li>
 						</ul>
 					</nav>
 
@@ -112,6 +112,16 @@
 													Element('userInput').element.value = ''
 													Element('userInput2').element.value = ''
 
+												def subtraction(*args, **kwargs):
+													text1 = Element('userInput3').element.value
+													text2 = Element('userInput4').element.value
+													if (text1 != '') and (text2 != ''):
+														text1_int = int(text1)
+														text2_int = int(text2)
+														Element('test-output2').element.innerText = text1_int-text2_int
+													Element('userInput3').element.value = ''
+													Element('userInput4').element.value = ''
+
 												def addition2(*args, **kwargs):
 													text1 = Element('userInput3').element.value
 													text2 = Element('userInput4').element.value
@@ -124,7 +134,7 @@
 
 												def twofunc(*args, **kwargs):
 													addition(*args, **kwargs)
-													addition2(*args, **kwargs)
+													subtraction(*args, **kwargs)
 
        										</py-script>
 										</div>
@@ -136,7 +146,7 @@
 										<img src="./pinkbox.png" alt="" />
 									</span>
 									<a>
-										<h2>Literally Addition</h2>
+										<h2>Literally Subtraction</h2>
 										<div class="content">
         									<b> <label id="lucky3"></label></b>
 											<p style="margin-bottom: -10px;">Add two integers as input</p>
